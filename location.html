@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="output.css" rel="stylesheet">
+        <title>Location | STEMspace</title>
+    </head>
+    <body class="bg-[#E0D0FF]">
+
+        <header class="max-lg:collapse w-full opacity-95 bg-[#192124] rounded-b-md shadow-sm fixed top-0 z-[100]">
+            <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
+            <label for="navbar-1-toggle" class="fixed inset-0 hidden max-lg:peer-checked:block"></label>
+            
+            <div class="collapse-title navbar px-6 py-2">
+                <div class="navbar-start w-full lg:w-1/2 flex justify-between lg:justify-start">
+                <a href="index.html" class="flex items-center no-underline font-bold text-[35px] md:text-[55px] text-white">
+                    <img src="images/stemspacelogo.png" alt="stemSpacelogo" class="h-[60px] w-[60px] md:h-[85px] md:w-[85px] mr-2"> 
+                    <span class="text-violet-600">STEM</span>
+                    <span class="hidden sm:inline">space Collective</span>
+                </a>
+                
+                <label for="navbar-1-toggle" class="btn btn-ghost text-white lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                </div>
+
+                <div class="navbar-end hidden lg:flex items-center gap-4">
+                    <ul class="menu menu-horizontal px-1 text-white text-lg font-semibold items-center">
+                        <li><a href="index.html#mission" class="hover:text-violet-500">About us</a></li>
+                        <li>
+                        <a href="schedule.html" class="hover:text-violet-500">Camp Schedule</a>
+                        </li>
+                        <li><a href="contact.html" class="hover:text-violet-500">Contact us</a></li>
+                        <li><a href='location.html'class="hover:text-violet-500">Where to Find Us</a></li>
+                    </ul>
+                <a href="https://forms.gle/7D9K2g1k4YmDVJGm7" target="_blank" class="block py-2 px-6 text-center text-white font-medium bg-violet-600 duration-150 hover:bg-violet-500 active:bg-violet-700 rounded-lg shadow-lg hover:shadow-none">Sign Up!</a>
+                </div>
+            </div>
+        </header>
+
+        <!--LOCATION SECTION-->
+        <section class="bg-[#E0D0FF] pt-40 pb-28 md:pt-48 min-h-screen">
+            <div class="max-w-screen-xl mx-auto px-4 md:px-8">
+
+                <!-- Page heading -->
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl md:text-[5.5rem] text-gray-900 font-black leading-none tracking-tighter">
+                        Find <span class="text-violet-600">Us</span>
+                    </h1>
+                </div>
+                <br>
+                <!-- Map + Address Card -->
+                <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-lg p-4 md:p-6 ">
+
+                    <!-- Responsive Map -->
+                    <div class="w-full aspect-video rounded-2xl overflow-hidden">
+                        <iframe
+                            class="w-full h-full border-0"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps?q=7030+Woodbine+Ave+%23801,+Markham,+ON+L3R+6G2&output=embed">
+                        </iframe>
+                    </div>
+
+                    <!-- Address + Copy Button -->
+                    <div class="mt-8 pt-2 flex flex-col sm:flex-row items-center justify-between gap-5 px-2">
+                        <p id="address-text" class="text-lg md:text-xl text-gray-900 font-semibold text-center sm:text-left">
+                            7030 Woodbine Ave #801, Markham, ON L3R 6G2
+                        </p>
+
+                        <button
+                            id="copy-address-btn"
+                            onclick="copyAddress()"
+                            class="shrink-0 flex flex-row items-center justify-center whitespace-nowrap gap-2 h-12 px-6 leading-none text-white font-bold bg-violet-600 duration-150 hover:bg-violet-500 active:bg-violet-700 rounded-full shadow-lg hover:shadow-none"
+                        >
+                            <svg id="copy-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="11" height="11" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span id="copy-btn-text">Copy Address</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--FOOTER-->
+        <footer class="footer sm:footer-horizontal bg-gray-900 text-base-content p-10">
+            <aside>
+                <img src="images/stemspacelogo.png" alt="STEMspace Logo" class="h-37 w-37 object-contain">
+                <p>
+                STEMspace Collective
+                <br />
+                Keep calm and STEM on!
+                </p>
+            </aside>
+            <nav>
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Programs</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Connect</h6>
+                <a class="link link-hover">Contact Us</a>
+                <a href="mailto:stemspace.collective@gmail.com" class="link link-hover">Email</a>
+                <a href="https://www.instagram.com/stemspace.collective?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="link link-hover">Instagram</a>
+            </nav>
+        </footer>
+
+        <script>
+            function copyAddress() {
+                const addressText = document.getElementById('address-text').textContent.trim();
+                const btnText = document.getElementById('copy-btn-text');
+                const originalText = btnText.textContent;
+
+                navigator.clipboard.writeText(addressText).then(function () {
+                    btnText.textContent = 'Copied!';
+                    setTimeout(function () {
+                        btnText.textContent = originalText;
+                    }, 2000);
+                }).catch(function () {
+                    // Fallback for older browsers / non-secure contexts
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = addressText;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+
+                    btnText.textContent = 'Copied!';
+                    setTimeout(function () {
+                        btnText.textContent = originalText;
+                    }, 2000);
+                });
+            }
+        </script>
+
+    </body>
+</html>

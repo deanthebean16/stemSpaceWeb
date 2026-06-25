@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@import "../view-transition.css";
+
+
+/*Background*/
+body {
+    background-color: #E0D0FF;
+}
+
+/* The main navbar container stretching across the page */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 15px 30px;   
+    opacity: 95%;           
+    background-color: #192124;      
+}
+
+/*logo styling */
+/* .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 55px;
+    color: #333;
+} */
+
+.logo img {
+    height: 100px;                  
+    width: 100px;
+    margin-right: 10px;
+}
+
+/* Aligning the navigation links horizontally */
+.navLinks {
+    display: flex;
+    list-style: none;               
+    align-items: center;
+}
+
+/* Adding space between individual TOP-LEVEL links only */
+.navLinks > li {
+    margin-left: 50px;              
+}
+
+/* TOP-LEVEL Link styling */
+.navLinks > li > a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
