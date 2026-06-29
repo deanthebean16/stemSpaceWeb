@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="output.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="images/stemspacelogo.png">
+        <title>FAQ | Stemspace</title>
+            <style>
+            .search-focus-highlight {
+                animation: search-focus-pulse 2s ease-out;
+            }
+            @keyframes search-focus-pulse {
+                0%   { box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.5); border-radius: 0.5rem; }
+                100% { box-shadow: 0 0 0 4px rgba(124, 58, 237, 0); border-radius: 0.5rem; }
+            }
+            </style>
+    </head>
+    <body>
+        <header class="w-full opacity-95 bg-[#192124] rounded-b-md shadow-sm fixed top-0 z-[100] ">
+            
+            <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
+            <label for="navbar-1-toggle" class="fixed inset-0 hidden peer-checked:block z-10"></label>
+
+            <div class="navbar px-6 py-2">
+                <div class="navbar-start w-1/2 flex items-center">
+                    <a href="index.html" class="flex items-center no-underline font-bold text-white">
+                        <img src="images/stemspacelogo.png" alt="stemSpacelogo" class="h-[50px] w-[50px] md:h-[85px] md:w-[85px] mr-1"> 
+                        
+                        <div class="flex flex-col sm:flex-row sm:gap-2 leading-none justify-center">
+                            <span class="text-violet-600 text-2xl sm:text-[35px] md:text-[55px]">STEMspace</span>
+                            
+                            <span class="text-lg sm:text-[35px] md:text-[55px]">Collective</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="navbar-end w-1/2 flex items-center justify-end gap-2 md:gap-4">
+                    <label for="search-toggle" class="btn btn-ghost btn-circle text-white" aria-label="Toggle search">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </label>
+
+                    <label for="navbar-1-toggle" class="btn btn-ghost btn-circle text-white" aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+
+                    <a href="https://forms.gle/7D9K2g1k4YmDVJGm7" target="_blank" class="block py-2 px-4 md:px-6 text-center text-white text-sm md:text-base font-medium bg-violet-600 duration-150 hover:bg-violet-500 active:bg-violet-700 rounded-lg shadow-lg hover:shadow-none whitespace-nowrap">
+                        <span class="md:hidden">Register!</span>
+                        <span class="hidden md:inline">Register for our 2026 Workshops!</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="site-search-widget" class="relative md:absolute md:right-[300px] md:top-full md:mt-2 md:w-80 z-10">
+                <input id="search-toggle" class="peer/search hidden" type="checkbox" />
+
+                <div class="grid grid-rows-[0fr] peer-checked/search:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out overflow-hidden bg-[#192124] md:rounded-xl md:shadow-xl border-t border-gray-700 md:border-t-0">
+                    <div class="overflow-hidden min-h-0">
+                        <form class="relative flex items-center gap-2 px-6 py-4" onsubmit="return false;" autocomplete="off">
+                            <input id="site-search-input" type="search" placeholder="Search STEMspace..." class="input w-full bg-white/10 text-white placeholder:text-gray-400 border-gray-600 focus:outline-none focus:border-violet-500 rounded-lg px-4 py-2" />
+                            <button type="submit" class="btn btn-ghost btn-circle text-white" aria-label="Submit search">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <ul id="site-search-results" class="hidden absolute left-6 right-6 md:left-0 md:right-0 top-full mt-2 bg-[#1f2832] border border-gray-700 rounded-lg shadow-xl max-h-80 overflow-y-auto z-20"></ul>
+            </div>
+
+            <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out overflow-hidden bg-[#192124] md:absolute md:right-[240px] md:top-full md:mt-2 md:w-64 md:rounded-xl md:shadow-xl relative z-10 border-t border-gray-700 md:border-t-0">                <div class="overflow-hidden min-h-0">
+                    <ul class="menu menu-vertical text-white text-lg font-semibold gap-2 px-6 py-4">
+                        <li><a href="index.html" class="hover:text-violet-500 standard-scroll">About us</a></li>
+                        <li><a href="index.html#mission"class="hover:text-violet-500">Our Mission 🚀</a></li>
+                        <li><a href="meet.html" class="hover:text-violet-500">Meet the Team 🙌</a></li>
+                        <li><a href="photogallery.html" class="hover:text-violet-500">Photo Gallery 📷</a></li>
+                        <li><a href="schedule.html" class="hover:text-violet-500">Workshop Schedule📅</a></li>
+                        <li><a href='location.html' class="hover:text-violet-500">Our Location 📍</a></li>
+                        <li><a href="contact.html" class="hover:text-violet-500">Contact us 📞</a></li>
+                        <li><a href='faq.html' class="hover:text-violet-500">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="bg-[#E0D0FF] p-8 min-h-screen font-sans text-slate-800 pt-40 pb-28 md:pt-48">
+            <div class="max-w-6xl mx-auto">
+
+                <h1 class="text-5xl font-black tracking-tight mb-4 text-slate-900">FAQ</h1>
+                <p class="text-lg text-slate-600 max-w-4xl mb-8 leading-relaxed">
+                    Frequently Asked Questions – Common problems and how to fix
+                </p>
+
+            <div class="space-y-4">
+                <details id="faq-free" class="group [&_summary::-webkit-details-marker]:hidden" open>
+                    <summary
+                    class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+                    >
+                    <h2 class="text-lg font-medium">Is it really free?</h2>
+
+                    <svg
+                        class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                    </summary>
+
+                    <p class="px-4 pt-4 text-gray-900">
+                    <strong>Yes!</strong> All our workshops, snacks, and take-home kits are completely free!
+                    </p>
+                </details>
+
+                <details id="faq-siblings" class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                    class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+                    >
+                    <h2 class="text-lg font-medium">Can siblings attend?</h2>
+
+                    <svg
+                        class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                    </summary>
+
+                    <p class="px-4 pt-4 text-gray-900">
+                    <strong>Yes</strong>, as long as they each get signed up individually on the google form.
+                    </p>
+                </details>
+
+                <details id="faq-parents" class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                    class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+                    >
+                    <h2 class="text-lg font-medium">Do parents stay?</h2>
+
+                    <svg
+                        class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                    </summary>
+
+                    <p class="px-4 pt-4 text-gray-900">
+                    No, most of our workshops are kids only. This is to give them an opportunity to learn and connect with their peers! However, we do have a family greenhouse building session, where parents are welcome to come with their children!
+                    </p>
+                </details>
+
+                <details id="faq-bring" class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                    class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+                    >
+                    <h2 class="text-lg font-medium">What should children bring to the workshops?</h2>
+
+                    <svg
+                        class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                    </summary>
+
+                    <p class="px-4 pt-4 text-gray-900">
+                    Children should come in comfortable clothing and closed toed shoes ideally. A water bottle is also recommended!
+                    </p>
+                </details>
+
+                <details id="faq-cant-attend" class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                    class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+                    >
+                    <h2 class="text-lg font-medium">What if we can't attend?</h2>
+
+                    <svg
+                        class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                    </summary>
+
+                    <p class="px-4 pt-4 text-gray-900">
+                    Please email stemspace.collective@gmail.com 48 in advance to the workshop date.
+                    </p>
+                </details>
+
+                <details id="faq-food" class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                    class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+                    >
+                    <h2 class="text-lg font-medium">Is food provided?</h2>
+
+                    <svg
+                        class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                    </summary>
+
+                    <p class="px-4 pt-4 text-gray-900">
+                    Yes, snacks and drinks will be provided.
+                    </p>
+                </details>
+
+                <details id="faq-ages" class="group [&_summary::-webkit-details-marker]:hidden">
+                    <summary
+                    class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+                    >
+                    <h2 class="text-lg font-medium">What ages are appropriate?</h2>
+
+                    <svg
+                        class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                        />
+                    </svg>
+                    </summary>
+
+                    <p class="px-4 pt-4 text-gray-900">
+                    Each session has a recommended age (typically grades 2-8), but we welcome youth of all ages to attend!
+                    </p>
+                </details>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer sm:footer-horizontal bg-gray-900 text-base-content p-10">
+        <aside>
+            <img src="images/stemspacelogo.png" alt="STEMspace Logo" class="h-37 w-37 object-contain">
+            <p class="text-white">
+                <strong>STEMspace Collective</strong>
+                <br />
+                Keep calm and STEM on!
+            </p>
+        </aside>
+        
+        <nav>
+            <h6 class="footer-title text-gray-600">Programs</h6>
+            <a href="schedule.html" class="link link-hover text-white">Workshop Schedule</a>
+            <a href="location.html" class="link link-hover text-white">Our Location</a>
+            <a href="faq.html" class="link link-hover text-white">FAQ</a>
+        </nav>
+        
+        <nav>
+            <h6 class="footer-title text-gray-600">Connect</h6>
+            <a href="contact.html" class="link link-hover text-white">Contact Us</a>
+            <a href="meet.html" class="link link-hover text-white">Meet the Team</a>
+            <a href="mailto:stemspace.collective@gmail.com" class="link link-hover text-white">Email</a>
+            <a href="https://www.instagram.com/stemspace.collective" target="_blank" class="link link-hover text-white">Instagram</a>
+        </nav>
+    </footer>
+
+    <script src="search-data.js"></script>
+    <script src="search-engine.js"></script>
+    </body>
+</html>

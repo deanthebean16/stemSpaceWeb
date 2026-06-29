@@ -8,45 +8,73 @@
         <link rel="icon" type="image/x-icon" href="images/stemspacelogo.png">
     </head>
     <body>
-        <header class="max-lg:collapse w-full opacity-95 bg-[#192124] rounded-b-md shadow-sm fixed top-0 z-[100]">
-            <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
-            <label for="navbar-1-toggle" class="fixed inset-0 hidden max-lg:peer-checked:block"></label>
+        <header class="w-full opacity-95 bg-[#192124] rounded-b-md shadow-sm fixed top-0 z-[100] ">
             
-            <div class="collapse-title navbar px-6 py-2">
-                <div class="navbar-start w-full lg:w-1/2 flex justify-between lg:justify-start">
-                    <a href="index.html" class="flex items-center no-underline font-bold text-[35px] md:text-[55px] text-white">
-                        <img src="images/stemspacelogo.png" alt="stemSpacelogo" class="h-[60px] w-[60px] md:h-[85px] md:w-[85px] mr-2"> 
-                        <span class="text-violet-600">STEMspace</span>
-                        <span class="hidden sm:inline">Collective</span>
+            <input id="navbar-1-toggle" class="peer hidden" type="checkbox" />
+            <label for="navbar-1-toggle" class="fixed inset-0 hidden peer-checked:block z-10"></label>
+
+            <div class="navbar px-6 py-2">
+                <div class="navbar-start w-1/2 flex items-center">
+                    <a href="index.html" class="flex items-center no-underline font-bold text-white">
+                        <img src="images/stemspacelogo.png" alt="stemSpacelogo" class="h-[50px] w-[50px] md:h-[85px] md:w-[85px] mr-1"> 
+                        
+                        <div class="flex flex-col sm:flex-row sm:gap-2 leading-none justify-center">
+                            <span class="text-violet-600 text-2xl sm:text-[35px] md:text-[55px]">STEMspace</span>
+                            
+                            <span class="text-lg sm:text-[35px] md:text-[55px]">Collective</span>
+                        </div>
                     </a>
-                    
-                    <label for="navbar-1-toggle" class="btn btn-ghost text-white lg:hidden">
+                </div>
+
+                <div class="navbar-end w-1/2 flex items-center justify-end gap-2 md:gap-4">
+                    <label for="search-toggle" class="btn btn-ghost btn-circle text-white" aria-label="Toggle search">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                        </svg>
+                    </label>
+
+                    <label for="navbar-1-toggle" class="btn btn-ghost btn-circle text-white" aria-label="Toggle menu">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </label>
-                </div>
 
-                <div class="navbar-end hidden lg:flex items-center gap-4">
-                    <ul class="menu menu-horizontal px-1 text-white text-lg font-semibold items-center">
-                        <li><a href="index.html#mission" class="hover:text-violet-500 standard-scroll">About us</a></li>
-                        <li><a href="schedule.html" class="hover:text-violet-500">Camp Schedule</a></li>
-                        <li><a href="contact.html" class="hover:text-violet-500">Contact us</a></li>
-                        <li><a href='location.html' class="hover:text-violet-500">Where to Find Us</a></li>
-                    </ul>
-                    <a href="https://forms.gle/7D9K2g1k4YmDVJGm7" target="_blank" class="block py-2 px-6 text-center text-white font-medium bg-violet-600 duration-150 hover:bg-violet-500 active:bg-violet-700 rounded-lg shadow-lg hover:shadow-none">Sign Up!</a>
+                    <a href="https://forms.gle/7D9K2g1k4YmDVJGm7" target="_blank" class="block py-2 px-4 md:px-6 text-center text-white text-sm md:text-base font-medium bg-violet-600 duration-150 hover:bg-violet-500 active:bg-violet-700 rounded-lg shadow-lg hover:shadow-none whitespace-nowrap">
+                        <span class="md:hidden">Register!</span>
+                        <span class="hidden md:inline">Register for our 2026 Workshops!</span>
+                    </a>
                 </div>
             </div>
 
-            <div class="collapse-content hidden max-lg:peer-checked:block bg-[#192124] px-6 pb-6 relative z-10">
-                <ul class="menu menu-vertical text-white text-lg font-semibold gap-2">
-                    <li><a href="index.html#mission" class="hover:text-violet-500 standard-scroll">About us</a></li>
-                    <li><a href="schedule.html" class="hover:text-violet-500">Camp Schedule</a></li>
-                    <li><a href="contact.html" class="hover:text-violet-500">Contact us</a></li>
-                    <li><a href='location.html' class="hover:text-violet-500">Where to Find Us</a></li>
-                </ul>
-                <div class="mt-4 pt-4 border-t border-gray-700">
-                    <a href="https://forms.gle/7D9K2g1k4YmDVJGm7" target="_blank" class="block w-full py-3 text-center text-white font-medium bg-violet-600 duration-150 hover:bg-violet-500 active:bg-violet-700 rounded-lg shadow-lg">Sign Up!</a>
+            <div id="site-search-widget" class="relative md:absolute md:right-[300px] md:top-full md:mt-2 md:w-80 z-10">
+                <input id="search-toggle" class="peer/search hidden" type="checkbox" />
+
+                <div class="grid grid-rows-[0fr] peer-checked/search:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out overflow-hidden bg-[#192124] md:rounded-xl md:shadow-xl border-t border-gray-700 md:border-t-0">
+                    <div class="overflow-hidden min-h-0">
+                        <form class="relative flex items-center gap-2 px-6 py-4" onsubmit="return false;" autocomplete="off">
+                            <input id="site-search-input" type="search" placeholder="Search STEMspace..." class="input w-full bg-white/10 text-white placeholder:text-gray-400 border-gray-600 focus:outline-none focus:border-violet-500 rounded-lg px-4 py-2" />
+                            <button type="submit" class="btn btn-ghost btn-circle text-white" aria-label="Submit search">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <ul id="site-search-results" class="hidden absolute left-6 right-6 md:left-0 md:right-0 top-full mt-2 bg-[#1f2832] border border-gray-700 rounded-lg shadow-xl max-h-80 overflow-y-auto z-20"></ul>
+            </div>
+
+            <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out overflow-hidden bg-[#192124] md:absolute md:right-[240px] md:top-full md:mt-2 md:w-64 md:rounded-xl md:shadow-xl relative z-10 border-t border-gray-700 md:border-t-0">                <div class="overflow-hidden min-h-0">
+                    <ul class="menu menu-vertical text-white text-lg font-semibold gap-2 px-6 py-4">
+                        <li><a href="index.html" class="hover:text-violet-500 standard-scroll">About us</a></li>
+                        <li><a href="index.html#mission"class="hover:text-violet-500">Our Mission 🚀</a></li>
+                        <li><a href="meet.html" class="hover:text-violet-500">Meet the Team 🙌</a></li>
+                        <li><a href="photogallery.html" class="hover:text-violet-500">Photo Gallery 📷</a></li>
+                        <li><a href="schedule.html" class="hover:text-violet-500">Workshop Schedule📅</a></li>
+                        <li><a href='location.html' class="hover:text-violet-500">Our Location 📍</a></li>
+                        <li><a href="contact.html" class="hover:text-violet-500">Contact us 📞</a></li>
+                        <li><a href='faq.html' class="hover:text-violet-500">FAQ</a></li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -56,7 +84,7 @@
 
                 <h1 class="text-5xl font-black tracking-tight mb-4 text-slate-900">Camp Schedule</h1>
                 <p class="text-lg text-slate-600 max-w-4xl mb-8 leading-relaxed">
-                    We are hosting four workshop sessions every Saturday in July from 11AM - 1PM. We look forward to learning & growing with you this summer!
+                    We are hosting 4 FREE workshop sessions every Saturday of July 2026 from 11AM - 1PM at 7030 Woodbine Ave #801, Markham, ON L3R 6G2. Snacks & drinks provided, as well as something for participants to take home! 
                 </p>
 
                 <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-6 items-start">
@@ -69,7 +97,7 @@
                         <h2 class="text-3xl font-black text-slate-900 mb-6">STEM: Space Junkbots 🤖: Recycle to the Moon!</h2>
 
                         <div class="border border-slate-200 rounded-3xl p-6 relative">
-                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Ages 10 - 14 / Grades 3 - 8)</span>
+                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Recommended Ages 8 - 14 / Grades 3 - 8)</span>
                             <h3 class="text-xl font-bold text-violet-900">11:00 - 11:45 AM</h3>
                             <p class="text-slate-600 text-sm marker:text-slate-400">
                                 Turn everyday recycled materials into a moving robot powered by a real motor! Participants will explore circuits and engineering as they design, build, and test their own Junkbots before taking on a fun "Race to the Moon" challenge. This hands-on workshop encourages creativity, innovation, and sustainability while showing how engineers use technology and problem-solving to tackle real-world challenges.
@@ -79,7 +107,7 @@
                         <h2 class="text-3xl font-black text-slate-900 mb-6 pt-10">Mental Wellness: 📝 Bullet Journal Design Studio</h2>
 
                         <div class="border border-slate-200 rounded-3xl p-6 relative">
-                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Ages 10 - 14 / Grades 3 - 8)</span>
+                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Recommended Ages 8 - 14 / Grades 3 - 8)</span>
                             <h3 class="text-xl font-bold text-violet-900">12:00 - 12:45 PM</h3>
                             <p class="text-slate-600 text-sm marker:text-slate-400">
                                 Transform a blank notebook into a personalized tool for creativity, organization, and growth. Participants will design custom pages to track goals, habits, moods, and daily activities while exploring how planners and data tracking can help us stay focused and balanced. By the end of the workshop, each participant will leave with a one-of-a-kind journal that reflects their personality and supports their everyday success.
@@ -98,7 +126,7 @@
                         <h2 class="text-3xl font-black text-slate-900 mb-6">STEM: 🎈🏁 Balloon Racers Engineering Challenge</h2>
 
                         <div class="border border-slate-200 rounded-3xl p-6 relative">
-                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Ages 8 - 11 / Grades 3 - 6)</span>
+                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Recommended Ages 8 - 11 / Grades 3 - 6)</span>
                             <h3 class="text-xl font-bold text-violet-900">11:00 - 11:45 AM</h3>
                             <p class="text-slate-600 text-sm marker:text-slate-400">
                                 Put your engineering skills to the test in this exciting design challenge! Working in teams, participants will build a balloon-powered car and compete to see whose design travels the farthest and fastest. Along the way, they'll learn about Newton's Laws of Motion, the engineering design process, and how creativity, teamwork, and perseverance help solve real-world problems.
@@ -108,7 +136,7 @@
                         <h2 class="text-3xl font-black text-slate-900 mb-6 pt-10">Mental Wellness: 🧪 Squishy Science: Design Your Stress-Away</h2>
 
                         <div class="border border-slate-200 rounded-3xl p-6 relative">
-                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Ages 8 - 11 / Grades 3 - 6)</span>
+                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Recommended Ages 8 - 11 / Grades 3 - 6)</span>
                             <h3 class="text-xl font-bold text-violet-900">12:00 - 12:45 PM</h3>
                             <p class="text-slate-600 text-sm marker:text-slate-400">
                                 Turn simple materials into a fun, personalized stress toy! Participants will design, build, and decorate their own squishies while exploring how different materials respond to pressure and movement. Through creativity, product design, and hands-on experimentation, youth will create a unique sensory tool that supports focus, relaxation, and self-expression—plus a custom squishy to take home and enjoy.
@@ -124,10 +152,10 @@
                     </div>
 
                     <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm">
-                        <h2 class="text-3xl font-black text-slate-900 mb-6">STEM: Lava Lamp Science: Bubbles & Density</h2>
+                        <h2 class="text-3xl font-black text-slate-900 mb-6">STEM: Lava Lamp Science: 🫧 Bubbles & Density</h2>
 
                         <div class="border border-slate-200 rounded-3xl p-6 relative">
-                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Ages 8 - 11 / Grades 3 - 6)</span>
+                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Recommended Ages 8 - 10 / Grades 3 - 5)</span>
                             <h3 class="text-xl font-bold text-violet-900">11:00 - 11:45 AM</h3>
                             <p class="text-slate-600 text-sm marker:text-slate-400">
                                 Create your own colourful lava lamp while discovering the science behind its creation! Participants will explore concepts like density and chemical reactions as they mix ingredients, do fun experiments, and observe the bubbling "lava" effect. This hands-on workshop combines STEM learning with creativity, and everyone takes home their own lava lamp to continue experimenting with.
@@ -137,7 +165,7 @@
                         <h2 class="text-3xl font-black text-slate-900 mb-6 pt-10">Mental Wellness: 🪨 Clay Creations: Worry Stones</h2>
 
                         <div class="border border-slate-200 rounded-3xl p-6 relative">
-                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Ages 8 - 11 / Grades 3 - 6)</span>
+                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Recommended Ages 8 - 10 / Grades 3 - 5)</span>
                             <h3 class="text-xl font-bold text-violet-900">12:00 - 12:45 PM</h3>
                             <p class="text-slate-600 text-sm marker:text-slate-400">
                                 Get creative and bring your ideas to life with air-dry clay! Participants will sculpt worry stones, mini creations, or fidget-friendly designs while learning about materials, shapes, and design. This relaxing, hands-on workshop encourages creativity, mindfulness, and self-expression—and everyone gets to take home their own unique creation.
@@ -153,20 +181,20 @@
                     </div>
 
                     <div class="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm">
-                        <h2 class="text-3xl font-black text-slate-900 mb-6">STEM: Mini Greenhouses: Build & Grow</h2>
+                        <h2 class="text-3xl font-black text-slate-900 mb-6">STEM: Mini Greenhouses 🏡: Build & Grow Family Workshop</h2>
 
                         <div class="border border-slate-200 rounded-3xl p-6 relative">
-                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Ages 8 - 11 / Grades 3 - 6)</span>
+                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Recommended Ages 8 - 14 / Grades 3 - 8)</span>
                             <h3 class="text-xl font-bold text-violet-900">11:00 - 11:45 AM</h3>
                             <p class="text-slate-600 text-sm marker:text-slate-400">
                                 Family workshop! Build and take home your own mini greenhouse while learning how plants grow! Families will plant seeds and explore concepts like plant biology and how greenhouses create the perfect environment for growth. A fun, hands-on activity that combines STEM learning with gardening and nature. 
                             </p>
                         </div>
 
-                        <h2 class="text-3xl font-black text-slate-900 mb-6 pt-10">Mental Wellness: Paint & Plant: Creative Gardens</h2>
+                        <h2 class="text-3xl font-black text-slate-900 mb-6 pt-10">Mental Wellness: Paint & Plant 🎨: Creative Gardens</h2>
 
                         <div class="border border-slate-200 rounded-3xl p-6 relative">
-                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Ages 8 - 11 / Grades 3 - 6)</span>
+                            <span class="inline-block w-fit mb-3 md:absolute md:top-6 md:right-6 md:mb-0 bg-amber-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">(Recommended Ages 8 - 14 / Grades 3 - 8)</span>
                             <h3 class="text-xl font-bold text-violet-900">12:00 - 12:45 PM</h3>
                             <p class="text-slate-600 text-sm marker:text-slate-400">
                                 Design a colourful flower pot, then bring it to life with your own seeds to grow at home! Participants will explore creativity, colour, and plant science while decorating their pots and learning what plants need to thrive. This fun, hands-on workshop combines art, nature, and STEM, leaving everyone with a personalized creation they can nurture long after the workshop ends. 
@@ -190,16 +218,21 @@
             
             <nav>
                 <h6 class="footer-title text-gray-600">Programs</h6>
-                <a href="schedule.html" class="link link-hover text-white">Camp Schedule</a>
-                <a href="location.html" class="link link-hover text-white">Where to Find Us</a>
+                <a href="schedule.html" class="link link-hover text-white">Workshop Schedule</a>
+                <a href="location.html" class="link link-hover text-white">Our Location</a>
+                <a href="faq.html" class="link link-hover text-white">FAQ</a>
             </nav>
             
             <nav>
                 <h6 class="footer-title text-gray-600">Connect</h6>
                 <a href="contact.html" class="link link-hover text-white">Contact Us</a>
+                <a href="meet.html" class="link link-hover text-white">Meet the Team</a>
                 <a href="mailto:stemspace.collective@gmail.com" class="link link-hover text-white">Email</a>
                 <a href="https://www.instagram.com/stemspace.collective" target="_blank" class="link link-hover text-white">Instagram</a>
             </nav>
-        </footer>    
+        </footer>
+
+    <script src="search-data.js"></script>
+    <script src="search-engine.js"></script>    
     </body>
 </html>
